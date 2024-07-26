@@ -48,7 +48,7 @@ app.use(function(req, res, next) {
 });
 
 
-mongoose.connect(process.env.DB, {useNewUrlParser: true, useUnifiedTopology: true}, (err) => {
+mongoose.connect(process.env.DB, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false}, (err) => {
   if (err) return console.error(err)
   const listener = app.listen(process.env.PORT || 3000, function () {
     console.log('Your app is listening on port ' + listener.address().port);

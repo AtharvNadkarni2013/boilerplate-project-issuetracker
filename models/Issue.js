@@ -11,6 +11,6 @@ const issueSchema = new mongoose.Schema({
 }, {timestamps: {
     createdAt: "created_on",
     updatedAt: "updated_on",
-}})
+}, versionKey: false})
 
 module.exports = mongoose.model("Issue", issueSchema)
